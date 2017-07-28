@@ -1,0 +1,1 @@
+ES6 中 不在使用 getInitialState，在构造函数中对 state做初始化

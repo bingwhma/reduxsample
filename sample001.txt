@@ -1,0 +1,24 @@
+var HelloMessage = React.createClass({  
+    getDragonKillingSword: function(){  
+        alert("OK");  
+    },  
+  render: function() {  
+    return <div> <h1>Hello {this.props.name}</h1>  <button onClick={this.props.clickCallback}>OK</button></div>  
+  }  
+});  
+  
+  
+var ImDaddyComponent = React.createClass({  
+    getDS: function(){  
+        //父组件调用子主键进行通信  
+        this.refs.getSwordButton.getDragonKillingSword();  
+    },  
+    render: function(){  
+        return (  
+            <div>  
+                <HelloMessage name="John" ref="getSwordButton" clickCallback={this.getDS}  />  
+                <button onClick={this.getDS}>OK2</button>  
+            </div>  
+        );  
+    }  
+}); 
